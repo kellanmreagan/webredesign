@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>WINTER AT PLEASANT VALLEY</title>
+  
+  <meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+ 
+</head>
+  <body bgcolor="#CCFFFF">
+  
+<p align="Center"><font size="6">WINTER AT PLEASANT VALLEY</font></p>
+  
+<p align="Center"><font color="#400040"><a href="pleasant_valley_is_a_winter_wond.html"><big>
+Click Here to See a Winter Picture Gallery</big></a>
+</font></p>
+<script language="JavaScript1.2" type="text/javascript">
+<!-- Begin
+var no = 15; // snow number
+var speed = 9; // smaller number moves the snow faster
+var snowflake = "snow.gif";
+
+var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+var ie4up = (document.all) ? 1 : 0;
+var dx, xp, yp;    // coordinate and position variables
+var am, stx, sty;  // amplitude and step variables
+var i, doc_width = 800, doc_height = 600;
+if (ns4up) {
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+} else if (ie4up) {
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+for (i = 0; i < no; ++ i) {  
+dx[i] = 0;                        // set coordinate variables
+xp[i] = Math.random()*(doc_width-50);  // set position variables
+yp[i] = Math.random()*doc_height;
+am[i] = Math.random()*20;         // set amplitude variables
+stx[i] = 0.02 + Math.random()/10; // set step variables
+sty[i] = 0.7 + Math.random();     // set step variables
+if (ns4up) {                      // set layers
+if (i == 0) {
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" ");
+document.write("top=\"15\" visibility=\"show\"><img src=\"");
+document.write(snowflake + "\" border=\"0\"></layer>");
+} else {
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" ");
+document.write("top=\"15\" visibility=\"show\"><img src=\"");
+document.write(snowflake + "\" border=\"0\"></layer>");
+   }
+} else if (ie4up) {
+if (i == 0) {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><img src=\"");
+document.write(snowflake + "\" border=\"0\"></div>");
+} else {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><img src=\"");
+document.write(snowflake + "\" border=\"0\"></div>");
+      }
+   }
+}
+function snowNS() {  // Netscape main animation function
+for (i = 0; i < no; ++ i) {  // iterate for every dot
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+dx[i] += stx[i];
+document.layers["dot"+i].top = yp[i];
+document.layers["dot"+i].left = xp[i] + am[i]*Math.sin(dx[i]);
+}
+setTimeout("snowNS()", speed);
+}
+function snowIE() {  // IE main animation function
+for (i = 0; i < no; ++ i) {  // iterate for every dot
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+dx[i] += stx[i];
+document.all["dot"+i].style.pixelTop = yp[i];
+document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]);
+}
+setTimeout("snowIE()", speed);
+}
+if (ns4up) {
+snowNS();
+} else if (ie4up) {
+snowIE();
+}
+// End -->
+</script> 
+<p align="Left"><font size="4"><font color="#0080ff">SNOWMOBILING:</font>&nbsp;
+We are located about 1/4 mile from a state funded, groomed trail.&nbsp; Ride
+in the fields near your cabin, or on a network of trails that can take you
+anywhere in the state. Unfortunately, we do not rent snowmobiles. <u>&nbsp;Call 
+for trail conditions.</u></font></p>
+  
+<p align="Left"><font size="4"><font color="#0080ff">CROSS COUNTRY SKIING:</font>
+&nbsp; Groomed trails are nearby at Wildcat Mountain State Park.&nbsp; There
+is a wonderful 7 mile loop trail that ranges in difficulty from easy to difficult.&nbsp;&nbsp;
+The rolling hills and deep valleys provide scenery for ridge top touring,
+with 5 beautiful overlooks.&nbsp; <font color="#ff0000">There is&nbsp; torch lit
+night skiing scheduled at nearby Wildcat Mountain State Park. &nbsp;Check
+with the park for dates and times.</font> </font> </p>
+  
+<p align="Left"><font size="4"><font color="#0080ff">SLEDDING/TUBING:&nbsp; </font><font color="#400040">A tubing hill is available at Fort McCoy (35 minutes).&nbsp; It is an inexpensive
+way to enjoy some great tubing via a rope tow.&nbsp; Downhill skiing and 
+snowboarding rentals are available at Fort McCoy also.&nbsp; </font><font color="#FF0000">There is also
+great 
+<u>sledding available right on the hills at Pleasant Valley.</u></font></font></p>
+  
+<p align="Left"><font size="4"><font color="#0080FF">DOWN HILL SKIING:&nbsp;</font>
+Down hill ski slopes are located about 45 minutes Pleasant Valley
+Log Cabins.&nbsp; Mount La Crosse&nbsp; and Cascade Mountain are both about the
+same distance away.&nbsp; Ski rental is available.</font></p>
+  
+<p align="Center"><a href="cabrental.html"><font size="4">BACK TO PLEASANT VALLEY</font></a>
+</p>
+ 
+</body>
+</html>
