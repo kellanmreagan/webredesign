@@ -21,7 +21,27 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* No global smooth-scroll: with a sticky header, Chrome animates the
+   scroll-into-view on every cross-page link that carries a #hash target,
+   which reads as a jarring slide right after the page has already painted.
+   Same-page anchors get a smooth scroll via JS instead (see main.js); plain
+   navigation (including cross-page #hash links) lands instantly and
+   correctly thanks to the scroll-margin-top below. */
+html { scroll-behavior: auto; }
+
+/* Keeps content that's jumped to (via #hash, same-page or cross-page) from
+   landing underneath the sticky header. --header-offset is measured and kept
+   up to date by main.js, since the header's real height varies (it wraps to
+   more lines on narrow screens). */
+:root {
+  --header-offset: 90px;
+}
+main[id],
+section[id],
+h2[id],
+h3[id] {
+  scroll-margin-top: var(--header-offset);
+}
 
 body {
   margin: 0;
