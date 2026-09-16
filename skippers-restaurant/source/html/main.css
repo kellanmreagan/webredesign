@@ -1,0 +1,812 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+	background-color:#000;
+	font-family: 'Open Sans', sans-serif;
+	min-width:900px;
+	background:url(../images/bkg_three.jpg) repeat;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#site_header {
+	height:125px;
+	background-image:url(../images/bkg_one.png);
+	background-repeat:repeat-x;
+	width:100%;
+	background-color:#101318;
+}
+
+#site_menu {
+	height:45px;
+	background-image:url(../images/bkg_two.jpg);
+	background-repeat:repeat-x;
+	width:100%;
+	
+}
+
+#menu_cont {
+	padding-top:11px;
+	color:#FFF;
+}
+
+.menu_btn {
+	float:left;
+	text-align:left; 
+	width:150px;
+}
+
+.menu_link {
+	font-size:16px;
+	color:#101318;
+	text-decoration:none;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight:bold;
+}
+
+.menu_link:hover{
+	color:#C51F23;	
+}
+
+#site_body {
+	background-repeat:repeat-x;
+	padding-top:16px;
+}
+
+#logo_cont {
+	width:350px;
+	height:125px;
+	float:left;
+	padding-top:5px;
+}
+
+#slogan_cont {
+	margin-top:22px;
+	float:left;
+	text-align:center;
+}
+
+#slogan_cont div {
+	text-align:center;
+	line-height:28px;
+}
+
+.slogan_text {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:bold;
+	font-size:24px;
+	font-style:italic;
+	color:#F8E515;
+	text-align:center;
+}
+
+#group_cont {
+	float:right;
+	position:relative;
+}
+
+#search_cont {
+	margin-top:60px;
+	margin-right:80px;
+	width:200px;
+	float:right;
+	color:#F8E515;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight:bold;
+	font-size:18px;
+}
+
+#search_cont div {
+	text-align:right;
+	line-height:26px;
+}
+
+#facebook {
+	float:right;
+	position:absolute;
+	top:80px;
+	left:245px;
+}
+
+.centered {
+	text-align:center;
+}
+
+.ind_box {
+	width:280px; 
+	height:200px; 
+	float:left; 
+	background-image:url(../images/box_bkg.jpg); 
+	background-repeat:no-repeat; 
+	overflow:hidden; 
+	margin-left:10px; 
+	margin-top:10px; 
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:16px; 
+	color:#FFF;	
+}
+
+.ind_box a {
+	color:#FFF;
+	text-decoration:underline;
+}
+.ind_box a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+
+.ind_box_inner {
+	width:240px; 
+	margin:0 auto; 
+	margin-top:12px;
+}
+
+#custom div {
+	line-height:22px;
+	font-weight:bold; 
+	text-align:center;
+}
+
+#bestof {
+	padding:0px 0px;
+}
+
+#site_rotate {
+	overflow:hidden;
+	width:570px;
+	height:250px;
+/*	background-image:url(../images/rotate1.jpg);*/
+	background-image:url(../images/home-photo.jpg);
+}
+
+#body_cont {
+	background-color:#FFF;
+	-moz-box-shadow:    0 0 20px #000000;
+    -webkit-box-shadow: 0 0 20px #000000;
+    box-shadow:         0 0 20px #000000;
+	width:880px;
+}
+
+.site_cont {
+	width:880px;
+	margin:0 auto;
+	
+}
+
+#spotlight {
+	float:right; 
+	width:280px; 
+	height:250px; 
+	margin-right:10px; 
+	margin-top:10px; 
+	background-image:url(../images/new_cont.jpg);
+}
+
+#spotlight_title {
+	text-align:center; 
+	padding:4px; 
+	margin-top:8px; 
+	font-size:26px; 
+	font-weight:bold; 
+	font-style:normal; 
+	color:#FFF;
+}
+
+#spotlight_image {
+	float:left; 
+	width:105px; 
+	height:105px; 
+	overflow:hidden; 
+	text-align:center; 
+	padding:5px;
+	padding-left:10px;
+}
+
+#spotlight_text {
+	float:left; 
+	width:135px; 
+	height:116px; 
+	overflow:hidden;
+	padding-left:10px;
+}
+
+#spotlight_cont {
+	height:130px;
+	padding-top:60px;
+	padding-bottom:60px;
+	text-align:center;
+} 
+
+.go_button {
+	text-align:center; 
+	margin-top:8px;
+}
+
+.menu_padding {
+	padding:8px;
+}
+
+.hometext_title {
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px; 
+	line-height:24px;
+	font-weight:bold;
+	font-style:italic;
+	color:#F8E515;
+}
+.hometext {
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px; 
+	line-height:18px;
+	color:#FFF;
+}
+.hometext a {
+	font-weight:bold;
+	font-style:italic;
+	color:#F8E515;
+}
+.hometext a:hover {text-decoration:none; color:#FFF;}
+.hometext_subtitle {
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px; 
+	line-height:26px;
+	font-weight:bold;
+	font-style:italic;
+	color:#F8E515;
+}
+
+.ind_box_subtitle_1 {
+	font-size:26px; 
+	line-height:28px; 
+	font-weight:bold; 
+	text-align:center; 
+	padding:14px;
+	color:#F8E515;
+}
+.ind_box_subtitle_2 {
+	font-size:23px; 
+	line-height:26px; 
+	font-weight:bold; 
+	text-align:center;
+}
+
+.footer {
+	font-size:14px; 
+	font-family: 'Open Sans Condensed', sans-serif; 
+	font-weight:bold;
+	color:#101318;
+}
+
+.footer a {
+	color:#101318;
+}
+
+.footer a:hover {
+	color:#C51F23;
+}
+
+#footer_info_cont {
+	float:left; 
+	padding-left:20px; 
+	padding-right:20px; 
+	padding-top:4px;
+}
+#footer_menu_cont {
+	float:left; 
+	padding-left:20px; 
+	padding-right:20px; 
+	padding-top:10px;
+}
+
+.ptitles, .upe_cat_title {
+	font-size:20px;
+	color:#000;
+	font-weight:bold;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.text2, .upe_short_desc {
+	font-size:14px;
+	color:#000000;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.tbold, .upe_title {
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.menu_text1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size:25px;
+	font-weight:bold;
+	font-style:italic;
+	color:#FFF;
+	text-align:center;
+	line-height:30px;
+}
+.menu_text2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size:36px;
+	font-weight:bold;
+	font-style:italic;
+	color:#F8E515;
+	text-align:center;
+	line-height:40px;
+}
+.menu_box {
+	font-size:13px; 
+	font-family: 'Open Sans', sans-serif;
+}
+
+.upe_container {
+	width:auto;
+	height:auto;
+	border:2px solid #333;
+	padding:6px;
+	cursor:pointer;
+	margin-top:4px;
+}
+
+.upe_short_desc {
+	margin-top:4px;
+	color:#000;
+}
+
+.upe_short_desc a {color:#000; text-decoration:underline;}
+.upe_short_desc a:hover {color:#666; text-decoration:none;}
+
+.upe_img_box {
+	padding:2px;
+	border:#CCC solid 1px;
+	margin:4px;
+	float:left;
+	width:100px;
+}
+
+.upe_img{
+	width:200px;
+	float:left;
+	clear:both;
+}
+
+.upe_hr {
+	clear:both;
+	width:auto;
+	height:16px;
+}
+
+.upe_fp_link {
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	color:#000;
+}
+a.upe_fp_link {color:#000; text-decoration:underline;}
+a.upe_fp_link:hover {color:#666; text-decoration:none;}
+
+.upe_full_page {
+	width:auto;
+	height:auto;
+	float:right;
+}
+
+.upe_spacer {
+	width:auto;
+	height:8px;
+	clear:both;
+}
+
+/* ==========================================================================
+   Plugin CSS
+   ========================================================================== */
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	1.0;
+	margin-top:		3px;
+}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width:			100%;
+	border-bottom:	#322213 solid 1px;
+	border-left:	#322213 solid 1px;
+	border-right:	#322213 solid 1px;
+	background:		#BD995A;
+	padding:		6px;
+	color:			#322213;
+	font-family: 	'Open Sans Condensed', sans-serif;
+	font-size:		14px;
+	font-weight:	bold; /**/
+}
+
+.sf-menu ul li a {
+	color:#322213;	
+}
+
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	
+	float:			left;
+	position:		relative;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+	text-decoration:none;
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			2em; /* match top ul list item height */
+	z-index:		99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: "";
+    }
+
+    abbr[title]:after {
+        content: "";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:hidden;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+/* 
+    Example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#cboxOverlay{background:url(images/overlay.png) 0 0 repeat;}
+#colorbox{}
+    #cboxTopLeft{width:21px; height:21px; background:url(images/controls.png) -100px 0 no-repeat;}
+    #cboxTopRight{width:21px; height:21px; background:url(images/controls.png) -129px 0 no-repeat;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(images/controls.png) -100px -29px no-repeat;}
+    #cboxBottomRight{width:21px; height:21px; background:url(images/controls.png) -129px -29px no-repeat;}
+    #cboxMiddleLeft{width:21px; background:url(images/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(images/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(images/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(images/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0px; background:url(images/controls.png) -75px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious.hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(images/controls.png) -50px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext.hover{background-position:-50px -25px;}
+        #cboxLoadingOverlay{background:url(images/loading_background.png) center center no-repeat;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) center center no-repeat;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url(images/controls.png) -25px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose.hover{background-position:-25px -25px;}
+
+/*
+    The following fixes png-transparency for IE6.  
+    It is also necessary for png-transparency in IE7 & IE8 to avoid 'black halos' with the fade transition
+    
+    Since this method does not support CSS background-positioning, it is incompatible with CSS sprites.
+    Colorbox preloads navigation hover classes to account for this.
+    
+    !! Important Note: AlphaImageLoader src paths are relative to the HTML document,
+    while regular CSS background images are relative to the CSS document.
+*/
+.cboxIE #cboxTopLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/internet_explorer/borderTopLeft.png, sizingMethod='scale');}
+.cboxIE #cboxTopCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/internet_explorer/borderTopCenter.png, sizingMethod='scale');}
+.cboxIE #cboxTopRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/internet_explorer/borderTopRight.png, sizingMethod='scale');}
+.cboxIE #cboxBottomLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/internet_explorer/borderBottomLeft.png, sizingMethod='scale');}
+.cboxIE #cboxBottomCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/internet_explorer/borderBottomCenter.png, sizingMethod='scale');}
+.cboxIE #cboxBottomRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/internet_explorer/borderBottomRight.png, sizingMethod='scale');}
+.cboxIE #cboxMiddleLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/internet_explorer/borderMiddleLeft.png, sizingMethod='scale');}
+.cboxIE #cboxMiddleRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/internet_explorer/borderMiddleRight.png, sizingMethod='scale');}

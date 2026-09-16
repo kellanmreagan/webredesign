@@ -9,6 +9,7 @@ on:
       - "dave-illgs-collision-repair-center/**"
       - "whispering-pines-resort/**"
       - "frontier-lodge/**"
+      - "skippers-restaurant/**"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
@@ -43,6 +44,7 @@ jobs:
           rsync -a --exclude=source dave-illgs-collision-repair-center/ dist/dave-illgs-collision-repair-center/
           rsync -a --exclude=source whispering-pines-resort/ dist/whispering-pines-resort/
           rsync -a --exclude=source frontier-lodge/ dist/frontier-lodge/
+          rsync -a --exclude=source skippers-restaurant/ dist/skippers-restaurant/
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
