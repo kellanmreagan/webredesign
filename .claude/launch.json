@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8934", "--directory", "pleasant-valley-log-cabins"],
       "port": 8934
+    },
+    {
+      "name": "dicrc-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8935", "--directory", "dave-illgs-collision-repair-center"],
+      "port": 8935
     }
   ]
 }

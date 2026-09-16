@@ -1,10 +1,12 @@
-name: Deploy Pleasant Valley Log Cabins to GitHub Pages
+name: Deploy site redesigns to GitHub Pages
 
 on:
   push:
     branches: ["main"]
     paths:
+      - "index.html"
       - "pleasant-valley-log-cabins/**"
+      - "dave-illgs-collision-repair-center/**"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
@@ -28,10 +30,19 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Assemble public site
+        # Publishes the portfolio landing page plus each site's finished
+        # redesign only — the raw source/ crawl archives (scraped HTML,
+        # full-size photo dumps, crawl logs) stay out of the public deploy.
+        run: |
+          mkdir -p dist
+          cp index.html dist/
+          rsync -a --exclude=source pleasant-valley-log-cabins/ dist/pleasant-valley-log-cabins/
+          rsync -a --exclude=source dave-illgs-collision-repair-center/ dist/dave-illgs-collision-repair-center/
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: pleasant-valley-log-cabins
+          path: dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
