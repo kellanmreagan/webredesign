@@ -33,10 +33,65 @@
   .site-card:hover { border-color: #b0182a; }
   .site-card h2 { margin: 0 0 6px; font-size: 1.15rem; color: #17171a; }
   .site-card span { color: #55545a; font-size: 0.95rem; }
+
+  #gate {
+    position: fixed;
+    inset: 0;
+    background: #17171a;
+    color: #f4f3f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 20px;
+  }
+  #gate.hidden { display: none; }
+  .gate-box { max-width: 300px; width: 100%; text-align: center; }
+  .gate-box h2 { font-size: 1.1rem; margin: 0 0 18px; color: #fff; }
+  #gate-pin {
+    width: 100%;
+    font-size: 1.4rem;
+    letter-spacing: 0.4em;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #232328;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+  #gate-submit {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #b0182a;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  #gate-error {
+    color: #ff8a8a;
+    font-size: 0.88rem;
+    margin-top: 10px;
+    min-height: 1.2em;
+  }
+  #content { display: none; }
 </style>
 </head>
 <body>
-  <div class="wrap">
+
+  <div id="gate">
+    <div class="gate-box">
+      <h2>Enter PIN to continue</h2>
+      <input id="gate-pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" aria-label="PIN">
+      <button id="gate-submit">Unlock</button>
+      <div id="gate-error"></div>
+    </div>
+  </div>
+
+  <div id="content" class="wrap">
     <h1>Claude Web Redesigns</h1>
     <p class="lede">Small-business website redesigns — one link per site.</p>
     <div class="sites">
@@ -50,5 +105,44 @@
       </a>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var PIN = "2007";
+      var gate = document.getElementById("gate");
+      var content = document.getElementById("content");
+      var input = document.getElementById("gate-pin");
+      var error = document.getElementById("gate-error");
+
+      function unlock() {
+        gate.classList.add("hidden");
+        content.style.display = "block";
+        try { sessionStorage.setItem("portfolio-unlocked", "1"); } catch (e) {}
+      }
+
+      function tryUnlock() {
+        if (input.value === PIN) {
+          unlock();
+        } else {
+          error.textContent = "Incorrect PIN.";
+          input.value = "";
+          input.focus();
+        }
+      }
+
+      var alreadyUnlocked = false;
+      try { alreadyUnlocked = sessionStorage.getItem("portfolio-unlocked") === "1"; } catch (e) {}
+      if (alreadyUnlocked) {
+        unlock();
+      } else {
+        input.focus();
+      }
+
+      document.getElementById("gate-submit").addEventListener("click", tryUnlock);
+      input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") tryUnlock();
+      });
+    })();
+  </script>
 </body>
 </html>
