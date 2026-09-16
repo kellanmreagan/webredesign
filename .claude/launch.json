@@ -12,6 +12,18 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8935", "--directory", "dave-illgs-collision-repair-center"],
       "port": 8935
+    },
+    {
+      "name": "wpr-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8937", "--directory", "whispering-pines-resort"],
+      "port": 8937
+    },
+    {
+      "name": "frontierlodge-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8938", "--directory", "frontier-lodge"],
+      "port": 8938
     }
   ]
 }
