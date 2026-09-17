@@ -24,6 +24,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8938", "--directory", "frontier-lodge"],
       "port": 8938
+    },
+    {
+      "name": "two-rivers-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8941", "--directory", "two-rivers-motel-and-cabins"],
+      "port": 8941
     }
   ]
 }
