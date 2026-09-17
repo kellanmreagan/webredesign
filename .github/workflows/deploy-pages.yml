@@ -11,6 +11,8 @@ on:
       - "frontier-lodge/**"
       - "skippers-restaurant/**"
       - "barefoot-on-the-beach/**"
+      - "morels-courtyard-inn/**"
+      - "two-rivers-motel-and-cabins/**"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
@@ -47,6 +49,8 @@ jobs:
           rsync -a --exclude=source frontier-lodge/ dist/frontier-lodge/
           rsync -a --exclude=source skippers-restaurant/ dist/skippers-restaurant/
           rsync -a --exclude=source barefoot-on-the-beach/ dist/barefoot-on-the-beach/
+          rsync -a --exclude=source morels-courtyard-inn/ dist/morels-courtyard-inn/
+          rsync -a --exclude=source two-rivers-motel-and-cabins/ dist/two-rivers-motel-and-cabins/
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
