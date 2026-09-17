@@ -15,16 +15,25 @@
   --shadow: 0 4px 18px rgba(32, 24, 12, 0.1);
   --radius: 10px;
   --max: 1120px;
+  --header-offset: 88px;
 }
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
+}
+
+h1, h2, h3, h4, [id] {
+  scroll-margin-top: var(--header-offset);
+}
 
 body {
   margin: 0;
   background: var(--cream);
   color: var(--ink);
+  overflow-x: hidden;
   font-family: "Newsreader", Georgia, "Times New Roman", serif;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -225,22 +234,34 @@ li { margin-bottom: 0.35em; }
   padding: 90px 0 70px;
   text-align: center;
 }
-.hero h1 { color: #fff; }
-.hero .lede { color: #f1ead9; margin: 0 auto 1.4em; }
+.hero h1 { color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,0.55); margin-top: 0.2em; position: relative; z-index: 1; }
+.hero .lede { color: #f1ead9; margin: 0.4em auto 1.4em; text-shadow: 0 1px 10px rgba(0,0,0,0.55); }
 .hero-tag {
   font-family: "Fraunces", Georgia, serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.82rem;
   color: var(--cream-soft);
-  margin-bottom: 0.8em;
+  margin: 0 0 0.9em;
   display: block;
+  line-height: 1.45;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
 }
 .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 1.4em; }
 
 .page-hero {
   padding: 54px 0 44px;
+  color: #fff;
+  background-color: var(--green-darker);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 220px;
+  text-align: center;
 }
+.page-hero h1 { color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,0.55); }
 
 /* Banner strip (book direct) */
 .banner {
@@ -326,7 +347,8 @@ li { margin-bottom: 0.35em; }
   box-shadow: var(--shadow);
 }
 .testimonial .stars { color: var(--gold); letter-spacing: 2px; margin-bottom: 6px; }
-.testimonial footer { margin-top: 10px; font-size: 0.88rem; color: var(--ink-soft); font-style: normal; }
+.testimonial footer,
+.testimonial .attribution { margin-top: 10px; font-size: 0.88rem; color: var(--ink-soft); font-style: normal; }
 
 /* Table */
 .table-wrap { overflow-x: auto; margin: 1.4em 0; }

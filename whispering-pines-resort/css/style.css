@@ -23,9 +23,12 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: auto; }
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: var(--header-offset);
+}
 
-main[id], section[id], h2[id], h3[id] {
+h1, h2, h3, h4, [id] {
   scroll-margin-top: var(--header-offset);
 }
 

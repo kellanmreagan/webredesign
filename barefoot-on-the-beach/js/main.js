@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function closeLightbox() {
       lightbox.classList.remove("open");
-      lbImg.src = "";
+      lbImg.removeAttribute("src");
     }
 
     closeBtn.addEventListener("click", closeLightbox);

@@ -21,7 +21,14 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: auto; }
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: 96px;
+}
+
+h1, h2, h3, h4, [id] {
+  scroll-margin-top: 96px;
+}
 
 body {
   margin: 0;
@@ -133,6 +140,7 @@ li { margin-bottom: 0.35em; }
   gap: 16px;
 }
 .brand { display: flex; align-items: center; }
+.brand a { display: inline-flex; }
 .brand img { height: 64px; width: auto; }
 
 .nav-toggle {
@@ -288,12 +296,23 @@ section { padding: 54px 0; }
   border: 1px solid var(--line);
 }
 
-/* Food collage */
+/* Food collage — 3-panel source image, natural aspect (no empty 4th cell) */
 .collage {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   border: 1px solid var(--line);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 0;
+  background: transparent;
+}
+.collage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  aspect-ratio: auto;
 }
 
 /* Hours / visit card */

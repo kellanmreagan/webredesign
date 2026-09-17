@@ -19,12 +19,20 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: auto; }
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: 96px;
+}
+
+h1, h2, h3, h4, [id] {
+  scroll-margin-top: 96px;
+}
 
 body {
   margin: 0;
   background: var(--sand);
   color: var(--ink);
+  overflow-x: hidden;
   font-family: "Jost", "Segoe UI", Arial, sans-serif;
   font-size: 17px;
   line-height: 1.65;
@@ -48,7 +56,9 @@ p { margin: 0 0 1em; }
 a { color: var(--coral-dark); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-img { max-width: 100%; display: block; }
+img, iframe, video, table { max-width: 100%; }
+img { display: block; }
+.grid > *, .site-header .container > *, .gallery-grid > * { min-width: 0; }
 
 ul { margin: 0 0 1em; padding-left: 1.3em; }
 li { margin-bottom: 0.4em; }
@@ -133,6 +143,7 @@ li { margin-bottom: 0.4em; }
   font-weight: 600;
   font-style: italic;
   color: var(--ocean-dark);
+  overflow-wrap: anywhere;
 }
 .brand-name span { color: var(--coral-dark); }
 
@@ -318,6 +329,7 @@ section { padding: 52px 0; }
 .lightbox.open { display: flex; }
 .lightbox figure { max-width: 90vw; max-height: 86vh; margin: 0; text-align: center; }
 .lightbox img { max-width: 90vw; max-height: 80vh; border-radius: 6px; margin: 0 auto; }
+.lightbox img:not([src]) { display: none; }
 .lightbox figcaption { color: #dcebef; margin-top: 10px; font-size: 0.9rem; }
 .lightbox-close {
   position: absolute;

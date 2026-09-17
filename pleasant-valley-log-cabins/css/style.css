@@ -27,7 +27,10 @@
    Same-page anchors get a smooth scroll via JS instead (see main.js); plain
    navigation (including cross-page #hash links) lands instantly and
    correctly thanks to the scroll-margin-top below. */
-html { scroll-behavior: auto; }
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: var(--header-offset, 90px);
+}
 
 /* Keeps content that's jumped to (via #hash, same-page or cross-page) from
    landing underneath the sticky header. --header-offset is measured and kept
@@ -36,10 +39,10 @@ html { scroll-behavior: auto; }
 :root {
   --header-offset: 90px;
 }
+h1, h2, h3, h4,
 main[id],
 section[id],
-h2[id],
-h3[id] {
+[id] {
   scroll-margin-top: var(--header-offset);
 }
 
@@ -306,6 +309,13 @@ section { padding: 56px 0; }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px 18px;
+}
+.icon-grid .icon-item { flex: 0 1 160px; }
 @media (max-width: 900px) {
   .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
@@ -479,6 +489,7 @@ table.rates tbody tr:nth-child(even) { background: var(--cream-deep); }
   border-radius: 6px;
   margin: 0 auto;
 }
+.lightbox img:not([src]) { display: none; }
 .lightbox figcaption {
   color: var(--cream-deep);
   margin-top: 12px;
