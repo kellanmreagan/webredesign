@@ -30,6 +30,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8941", "--directory", "two-rivers-motel-and-cabins"],
       "port": 8941
+    },
+    {
+      "name": "botb-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8939", "--directory", "barefoot-on-the-beach"],
+      "port": 8939
     }
   ]
 }
